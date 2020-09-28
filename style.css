@@ -2,6 +2,7 @@
 
 :root {
     --color-white: white;
+    --color-purple: #7232c5;
 }
 
 
@@ -47,8 +48,8 @@ header{
 
 .info img {
     border-radius: 50%;
+    border: 5px solid var(--color-purple);
     height: 320px;
-    padding: 20px;
 }
 
 .info h1 {
