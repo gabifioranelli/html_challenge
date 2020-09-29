@@ -3,6 +3,7 @@
 :root {
     --color-white: white;
     --color-purple: #7232c5;
+    --color-background: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -83,4 +84,99 @@ header{
 #links-footer a {
     font-size: 14px;
     border-bottom: 1px solid var(--color-white);;
+}
+
+
+/*=== CARDS ===*/
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--color-background);
+}
+
+.card__image-container img {
+    width: 100%;
+}
+
+.card__image-container img:hover {
+    cursor: pointer;
+    transition: color 200ms;
+    filter: brightness(80%);
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* === MODAL ===*/
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal {
+    color: black;
+    position: absolute;
+    right: 35px;
+    top: 11px;
+    cursor: pointer;
+}
+
+/* === MODAL.ACTIVE ===*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
+
+
+/* === MODAL.FULL-SCREEN ===*/
+
+.modal.full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
